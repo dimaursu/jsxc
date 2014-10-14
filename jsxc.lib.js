@@ -253,7 +253,10 @@ var jsxc;
             // Add jsxc login action to form
             form.submit(function() {
 
-               var settings = jsxc.prepareLogin();
+               var username = $(jsxc.options.loginForm.jid).val();
+               var password = $(jsxc.options.loginForm.pass).val();
+
+               var settings = jsxc.prepareLogin(username, password);
 
                if (settings.xmpp.onlogin === "true" || settings.xmpp.onlogin === true) {
                   jsxc.triggeredFromForm = true;
@@ -310,11 +313,8 @@ var jsxc;
        * @memberOf jsxc
        * @returns Loaded settings
        */
-      prepareLogin: function() {
+      prepareLogin: function(username, password) {
          jsxc.gui.showWaitAlert(jsxc.l.Logging_in);
-
-         var username = $(jsxc.options.loginForm.jid).val();
-         var password = $(jsxc.options.loginForm.pass).val();
 
          if (typeof jsxc.options.loadSettings !== 'function') {
             jsxc.error('No loadSettings function given. Abort.');
@@ -1114,7 +1114,10 @@ var jsxc;
             jsxc.options.loginForm.jid = $(this).find('#jsxc_username');
             jsxc.options.loginForm.pass = $(this).find('#jsxc_password');
 
-            jsxc.prepareLogin();
+            var username = $(jsxc.options.loginForm.jid).val();
+            var password = $(jsxc.options.loginForm.pass).val();
+
+            jsxc.prepareLogin(username, password);
 
             jsxc.triggeredFromBox = true;
 
