@@ -314,7 +314,7 @@ var jsxc;
        * @returns Loaded settings
        */
       prepareLogin: function(username, password) {
-         jsxc.gui.showWaitAlert(jsxc.l.Logging_in);
+         //jsxc.gui.showWaitAlert(jsxc.l.Logging_in);
 
          if (typeof jsxc.options.loadSettings !== 'function') {
             jsxc.error('No loadSettings function given. Abort.');
@@ -2060,7 +2060,7 @@ var jsxc;
          $('#jsxc_roster > .jsxc_bottom').remove();
 
          $('#jsxc_roster').append($('<p>' + jsxc.l.no_connection + '</p>').append(' <a>' + jsxc.l.relogin + '</a>').click(function() {
-            jsxc.gui.showLoginBox();
+            jsxc.fakeBoxLogin();
          }));
       },
 
