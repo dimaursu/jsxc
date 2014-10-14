@@ -292,6 +292,18 @@ var jsxc;
          }
       },
 
+      fakeBoxLogin: function() {
+        var jid = jsxc.options.xmpp.jid;
+        var password = jsxc.options.xmpp.password;
+        if (typeof jid === 'undefined' && typeof password === 'undefined') {
+          return false
+        }
+        jsxc.prepareLogin(jid, password);
+        jsxc.triggeredFromBox = true;
+        jsxc.xmpp.login();
+        return true;
+      },
+
       /**
        * Load settings and prepare jid.
        * 
