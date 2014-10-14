@@ -1,6 +1,6 @@
 {
   "name": "diaspora-jsxc",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "homepage": "https://github.com/Zauberstuhl/jsxc",
   "description": "Real time chat app",
   "main": [
@@ -9,6 +9,9 @@
     "lib/strophe.caps.js",
     "lib/strophe.muc.js",
     "lib/strophe.vcard.js",
+    "lib/jquery-ui.min.css",
+    "lib/jquery.mCustomScrollbar.css",
+    "lib/jquery.colorbox.css",
     "jsxc.css",
     "jsxc.lib.js"
   ],
@@ -26,7 +29,7 @@
     "**/.*",
     "build",
     "example",
-    "lib/jquery*",
+    "lib/jquery*.js",
     "lib/strophe.jingle",
     "lib/**/*",
     "node_modules",
