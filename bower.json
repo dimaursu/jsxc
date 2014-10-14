@@ -1,0 +1,46 @@
+{
+  "name": "diaspora-jsxc",
+  "version": "0.0.16",
+  "homepage": "https://github.com/Zauberstuhl/jsxc",
+  "description": "Real time chat app",
+  "main": [
+    "lib/strophe.js",
+    "lib/strophe.disco.js",
+    "lib/strophe.caps.js",
+    "lib/strophe.muc.js",
+    "lib/strophe.vcard.js",
+    "jsxc.css",
+    "jsxc.lib.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "xmpp",
+    "chat",
+    "strophe",
+    "diaspora"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "build",
+    "example",
+    "lib/jquery*",
+    "lib/strophe.jingle",
+    "lib/**/*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "jquery-ui": "~1.11.1",
+    "jquery-colorbox": "~1.5.14",
+    "jquery.slimscroll": "~1.3.3",
+    "jquery-fullscreen": "~1.1.4",
+    "strophejs-jingle": "~0.0.1",
+    "otr": "~0.2.13"
+  }
+}
