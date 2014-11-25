@@ -21,8 +21,8 @@ $(function() {
       loadSettings: function(username, password) {
          return {
             xmpp: {
-               url: '/http-bind/',
-               domain: 'localhost',
+              url: 'https://sechat.org/http-bind',
+               domain: 'sechat.org',
                resource: 'example',
                overwrite: true,
                onlogin: true

@@ -196,8 +196,13 @@ var jsxc;
          }
 
          // set language
-         var lng = Diaspora.I18n.language || 'en';
-         i18n.init({ lng: lng, fallbackLng: 'en' });
+         $.i18n.init({
+           lng: (typeof variable !== 'undefined' ? Diaspora.I18n.language : 'en'),
+           resGetPath: '/locales/%{lng}/translation.json',
+           // use localStorage and set expiration to a day
+           useLocalStorage: true,
+           localStorageExpirationTime: 60 * 60 * 24 * 1000,
+         });
 
          // Check localStorage
          if (typeof (localStorage) === 'undefined') {
