@@ -235,6 +235,8 @@ var jsxc;
                //return;
             //}
 
+         }
+
             if (typeof jsxc.options.formFound === 'function') {
                jsxc.options.formFound.call();
             }
@@ -272,7 +274,7 @@ var jsxc;
                return true;
             });
 
-         } else { jsxc.restoreOldConnection(); }
+            jsxc.restoreOldConnection();
       },
 
       login: function() { /* TODO deprecated function */ },
