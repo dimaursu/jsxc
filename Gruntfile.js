@@ -150,7 +150,8 @@ module.exports = function(grunt) {
           options: {
             timeout: 10000,
             urls: [
-              'http://localhost:3000/test/bower/bower_spec.html'
+              'http://localhost:3000/test/bower/bower_spec.html',
+              'http://localhost:3000/test/jsxc/jsxc_spec.html'
             ]
           }
         }
