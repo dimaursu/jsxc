@@ -22,6 +22,10 @@ QUnit.test( "Parse bower.json and check if main files exist", function( assert )
 
   jQuery.each(result.main, function(i) {
     var file = result.main[i];
-    assert.ok(fileExists(baseDir + file) == true, file + " exists");
+    if (file.indexOf('*') >= 0) {
+      console.debug("Skipping file check for: " + file);
+    } else {
+      assert.ok(fileExists(baseDir + file) == true, file + " exists");
+    }
   });
 });
