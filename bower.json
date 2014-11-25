@@ -4,6 +4,7 @@
   "homepage": "https://github.com/diaspora/jsxc",
   "description": "XMPP javascript client for diaspora",
   "main": [
+    "locales/**/*.json",
     "build/lib/strophe.js",
     "build/lib/strophe.disco.js",
     "build/lib/strophe.caps.js",
