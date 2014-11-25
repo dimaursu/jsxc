@@ -198,7 +198,7 @@ var jsxc;
          // set language
          $.i18n.init({
            lng: (typeof variable !== 'undefined' ? Diaspora.I18n.language : 'en'),
-           resGetPath: '/locales/%{lng}/translation.json',
+           resGetPath: jsxc.options.root + '/locales/%{lng}/translation.json',
            // use localStorage and set expiration to a day
            useLocalStorage: true,
            localStorageExpirationTime: 60 * 60 * 24 * 1000,

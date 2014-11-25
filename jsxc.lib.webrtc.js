@@ -972,6 +972,4 @@ jsxc.gui.template.videoWindow = '<div class="jsxc_webrtc">\
          $(document).on('attached.jsxc', jsxc.webrtc.init);
       }
    });
-
-   });
 }(jQuery));
