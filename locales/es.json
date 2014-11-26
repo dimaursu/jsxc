@@ -1,4 +1,4 @@
-{
+{"translation": {
   "Logging_in": "Por favor, espere...",
   "your_connection_is_unencrypted": "Su conexión no está cifrada.",
   "your_connection_is_encrypted": "Su conexión está cifrada.",
@@ -155,4 +155,4 @@
   "Remote_Fingerprint": "Firma digital remota",
   "Video_call_not_possible": "Llamada de vídeo no es posible",
   "Start_video_call": "Iniciar llamada de vídeo"
-}
+}}

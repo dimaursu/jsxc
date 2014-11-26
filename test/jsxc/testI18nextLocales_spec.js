@@ -26,41 +26,26 @@ var jsxc_options = {
   }
 };
 
-function readFile(path) {
-  return JSON.parse(
-    jQuery.ajax({
-      dataType: "jsonp",
-      url: path,
-      async: false
-    }).responseText
-  );
-}
-
 QUnit.test( "Check if we provide the correct locales", function( assert ) {
   Diaspora.I18n.language = 'en';
   jsxc.init(jsxc_options);
-  var enLocales = readFile('../../locales/en/translation.json');
-  assert.ok(enLocales != null);
-  $.each(enLocales, function(key, val) {
-    // TODO i18next returns key instead of value why?!
-    // is i18next aware of the json file?
-    //assert.ok($.t(key) == val, val + " equals " + $.t(key));
+  assert.ok(I18next != null);
+  $.each(I18next.en.translation, function(key, val) {
+    assert.ok($.t(key) == val, "\"" + val + "\" equals \"" + $.t(key) + "\"");
   });
 
   Diaspora.I18n.language = 'de';
   jsxc.init(jsxc_options);
-  var deLocales = readFile('../../locales/de/translation.json');
-  assert.ok(deLocales != null);
-  $.each(deLocales, function(key, val) {
-    //assert.ok($.t(key) == val, val + " equals " + $.t(key));
+  assert.ok(I18next != null);
+  $.each(I18next.de.translation, function(key, val) {
+    assert.ok($.t(key) == val, "\"" + val + "\" equals \"" + $.t(key) + "\"");
   });
 
   Diaspora.I18n.language = 'es';
   jsxc.init(jsxc_options);
-  var esLocales = readFile('../../locales/es/translation.json');
-  assert.ok(esLocales != null);
-  $.each(esLocales, function(key, val) {
-    //assert.ok($.t(key) == val, key + " equals the locale file");
+  assert.ok(I18next != null);
+  $.each(I18next.es.translation, function(key, val) {
+    assert.ok($.t(key) == val, "\"" + val + "\" equals \"" + $.t(key) + "\"");
   });
 });
 

@@ -1,4 +1,4 @@
-{
+{"translation": {
   "Logging_in": "Login läuft…",
   "your_connection_is_unencrypted": "Deine Verbindung ist UNverschlüsselt.",
   "your_connection_is_encrypted": "Deine Verbindung ist verschlüsselt.",
@@ -168,4 +168,4 @@
   "Remote_Fingerprint": "Remote Fingerprint",
   "Video_call_not_possible": "Videoanruf nicht verfügbar. Dein Gesprächspartner unterstützt keine Videotelefonie.",
   "Start_video_call": "Starte Videoanruf"
-}
+}}

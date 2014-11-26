@@ -1,4 +1,4 @@
-{
+{"translation": {
   "Logging_in": "Logging in…",
   "your_connection_is_unencrypted": "Your connection is unencrypted.",
   "your_connection_is_encrypted": "Your connection is encrypted.",
@@ -167,4 +167,4 @@
   "Remote_Fingerprint": "Remote fingerprint",
   "Video_call_not_possible": "Video call not possible. Your buddy does not support video calls.",
   "Start_video_call": "Start video call"
-}
+}}

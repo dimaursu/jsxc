@@ -195,10 +195,11 @@ var jsxc;
             lang = jsxc.options.defaultLang;
          }
 
-         // set language
+         I18next.language = (typeof Diaspora !== 'undefined' ? Diaspora.I18n.language : 'en');
+         // initialize i18n translator
          $.i18n.init({
-           lng: (typeof variable !== 'undefined' ? Diaspora.I18n.language : 'en'),
-           resGetPath: jsxc.options.root + '/locales/%{lng}/translation.json',
+           lng: I18next.language,
+           resStore: I18next,
            // use localStorage and set expiration to a day
            useLocalStorage: true,
            localStorageExpirationTime: 60 * 60 * 24 * 1000,
