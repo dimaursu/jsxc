@@ -1,7 +1,7 @@
 /*! This file is concatenated for the browser. */
 
 /*!
- * jsxc v1.0.0 - 2014-11-25
+ * jsxc v1.0.0 - 2014-11-26
  * 
  * Copyright (c) 2014 Klaus Herberth <klaus@jsxc.org> <br>
  * Released under the MIT license
@@ -210,10 +210,11 @@ var jsxc;
             lang = jsxc.options.defaultLang;
          }
 
-         // set language
+         I18next.language = (typeof Diaspora !== 'undefined' ? Diaspora.I18n.language : 'en');
+         // initialize i18n translator
          $.i18n.init({
-           lng: (typeof variable !== 'undefined' ? Diaspora.I18n.language : 'en'),
-           resGetPath: jsxc.options.root + '/locales/%{lng}/translation.json',
+           lng: I18next.language,
+           resStore: I18next,
            // use localStorage and set expiration to a day
            useLocalStorage: true,
            localStorageExpirationTime: 60 * 60 * 24 * 1000,
@@ -5447,7 +5448,7 @@ var jsxc;
 }(jQuery));
 
 /*!
- * jsxc v1.0.0 - 2014-11-25
+ * jsxc v1.0.0 - 2014-11-26
  * 
  * Copyright (c) 2014 Klaus Herberth <klaus@jsxc.org> <br>
  * Released under the MIT license
